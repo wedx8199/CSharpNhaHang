@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C263EF2B-CB7B-46EC-9B8B-092A48B203F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyNhaHang</RootNamespace>
+    <AssemblyName>QuanLyNhaHang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillInfoDAO.cs" />
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\TableDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\BillInfo.cs" />
+    <Compile Include="DTO\Category.cs" />
+    <Compile Include="DTO\Food.cs" />
+    <Compile Include="DTO\Menu.cs" />
+    <Compile Include="DTO\Table.cs" />
+    <Compile Include="fAccountProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAccountProfile.Designer.cs">
+      <DependentUpon>fAccountProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPrint.Designer.cs">
+      <DependentUpon>fPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPrintDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPrintDT.Designer.cs">
+      <DependentUpon>fPrintDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fReceipt.Designer.cs">
+      <DependentUpon>fReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTableManager.Designer.cs">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhahangDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahangDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nhahangDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahangDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nhahangDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahangDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nhahangDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahangDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nhahangDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahangDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nhahangDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahangDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nhahangDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nhahangDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="fAccountProfile.resx">
+      <DependentUpon>fAccountProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPrint.resx">
+      <DependentUpon>fPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPrintDT.resx">
+      <DependentUpon>fPrintDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fReceipt.resx">
+      <DependentUpon>fReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTableManager.resx">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintBill.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="ReportDT.rdlc" />
+    <None Include="nhahangDataSet1.xsc">
+      <DependentUpon>nhahangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nhahangDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nhahangDataSet1.xss">
+      <DependentUpon>nhahangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet11.xsc">
+      <DependentUpon>nhahangDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nhahangDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nhahangDataSet11.xss">
+      <DependentUpon>nhahangDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet2.xsc">
+      <DependentUpon>nhahangDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nhahangDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nhahangDataSet2.xss">
+      <DependentUpon>nhahangDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet3.xsc">
+      <DependentUpon>nhahangDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nhahangDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nhahangDataSet3.xss">
+      <DependentUpon>nhahangDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet4.xsc">
+      <DependentUpon>nhahangDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nhahangDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nhahangDataSet4.xss">
+      <DependentUpon>nhahangDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet5.xsc">
+      <DependentUpon>nhahangDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nhahangDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nhahangDataSet5.xss">
+      <DependentUpon>nhahangDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet6.xsc">
+      <DependentUpon>nhahangDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="nhahangDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nhahangDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nhahangDataSet6.xss">
+      <DependentUpon>nhahangDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Final-Background-For-Login.png" />
+    <None Include="Resources\beautiful-color-ui-gradients-backgrounds-bloody-mary.png" />
+    <None Include="Resources\beautiful-color-ui-gradients-backgrounds-bloody-mary.jpg" />
+    <None Include="Resources\ricardo.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\5dd7d1208eb33c71b480bc39.png" />
+    <None Include="Resources\logout-icon.png" />
+    <None Include="Resources\human+male+profile+user+icon-1320196240448793481.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\key_protection_lock_security_access_forbidden_safe_secure_private_red_alert_password_protect_admin_safety_unlock_system_flat_design_icon-512.png" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\them.jpg" />
+    <None Include="Resources\Final-Background-For-Login.jpg" />
+    <None Include="Resources\css-gradient-generators-12.jpg" />
+    <None Include="Resources\css-gradient-generators-13.jpg" />
+    <None Include="Resources\bill-512.png" />
+    <None Include="Resources\flat-style-circle-add-2-512.png" />
+    <None Include="Resources\flat-style-circle-add-2-5121.png" />
+    <None Include="Resources\cdn6_aptoide_com-67bacc637d58c80da40a5c2ec6d6f74d_icon.png" />
+    <None Include="Resources\compose+draw+edit+write+icon-1320196713151339744.png" />
+    <None Include="Resources\refresh22-512.png" />
+    <None Include="Resources\search--v2.png" />
+    <None Include="Resources\391-512.png" />
+    <None Include="Resources\password.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

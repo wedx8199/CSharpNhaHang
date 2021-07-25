@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="nhahangDataSet2" targetNamespace="http://tempuri.org/nhahangDataSet2.xsd" xmlns:mstns="http://tempuri.org/nhahangDataSet2.xsd" xmlns="http://tempuri.org/nhahangDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="nhahangConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="nhahangConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLyNhaHang.Properties.Settings.GlobalReference.Default.nhahangConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetListBillByDateForReportTableAdapter" GeneratorDataComponentClassName="GetListBillByDateForReportTableAdapter" Name="GetListBillByDateForReport" UserDataComponentName="GetListBillByDateForReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="nhahangConnectionString (Settings)" DbObjectName="`nhahang`.`GetListBillByDateForReport`" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>`nhahang`.`GetListBillByDateForReport`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+              <Mapping SourceColumn="discount" DataSetColumn="discount" />
+              <Mapping SourceColumn="DateChecked" DataSetColumn="DateChecked" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="nhahangDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="nhahangDataSet2" msprop:Generator_UserDSName="nhahangDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GetListBillByDateForReport" msprop:Generator_TableClassName="GetListBillByDateForReportDataTable" msprop:Generator_TableVarName="tableGetListBillByDateForReport" msprop:Generator_TablePropName="GetListBillByDateForReport" msprop:Generator_RowDeletingName="GetListBillByDateForReportRowDeleting" msprop:Generator_RowChangingName="GetListBillByDateForReportRowChanging" msprop:Generator_RowEvHandlerName="GetListBillByDateForReportRowChangeEventHandler" msprop:Generator_RowDeletedName="GetListBillByDateForReportRowDeleted" msprop:Generator_UserTableName="GetListBillByDateForReport" msprop:Generator_RowChangedName="GetListBillByDateForReportRowChanged" msprop:Generator_RowEvArgName="GetListBillByDateForReportRowChangeEvent" msprop:Generator_RowClassName="GetListBillByDateForReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:float" />
+              <xs:element name="discount" msprop:Generator_ColumnVarNameInTable="columndiscount" msprop:Generator_ColumnPropNameInRow="discount" msprop:Generator_ColumnPropNameInTable="discountColumn" msprop:Generator_UserColumnName="discount" type="xs:int" />
+              <xs:element name="DateChecked" msprop:Generator_ColumnVarNameInTable="columnDateChecked" msprop:Generator_ColumnPropNameInRow="DateChecked" msprop:Generator_ColumnPropNameInTable="DateCheckedColumn" msprop:Generator_UserColumnName="DateChecked" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
